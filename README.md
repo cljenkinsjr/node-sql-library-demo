@@ -7,7 +7,7 @@
 
 ## Setup
 
--Execute the following to setup the project
+- Execute the following to setup the project
 --
 
 
