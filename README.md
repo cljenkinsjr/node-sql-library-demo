@@ -17,6 +17,7 @@
   - npm install method-override --save
   - npm install mysql --save
   - npm install http-errors --save
+  - npm install debug --save
   - npm install express --save
   - npm install path --save
   - npm install cookie-parser --save
