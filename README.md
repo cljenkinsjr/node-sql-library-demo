@@ -7,8 +7,19 @@
 
 ## Setup
 
-- Execute the following to setup the project
---
+- Execute the following commands on a command line to setup the project:
+  - npm install -g express-generator
+  - express --view=ejs node-sql-library-demo
+  - cd node-sql-library-demo
+  - npm install express-flash --save
+  - npm install express-session --save
+  - npm install method-override --save
+  - npm install mysql --save
+  - npm install http-errors --save
+  - npm install express --save
+  - npm install path --save
+  - npm install cookie-parser --save
+  - npm install morgan --save
 
 
 ## The Project Explanation
