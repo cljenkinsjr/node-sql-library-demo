@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link rel="stylesheet" href="./resources/css/style.css">
+        <link rel="stylesheet" href="./resources/css/layout.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <title>Campuses</title>
+    </head>
+
+    <body>
+        <h1>We Can Code Libraries</h1>
+
+        <% if (messages.success) { %>
+            <div class="alert alert-success" role="alert"><%- messages.success %></div>
+        <% } %>
+
+        <% if (messages.error) { %>
+            <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+        <% } %>
+
+        <h2>
+            <% if(data.length) { %>
+            <table>
+                <tbody>
+                    <% for(let i = 0; i< data.length; i++) { %>
+                        
+                        <tr>
+                            <td>
+                                <a href="./campuses/campus/<%= data[i].campus_id%>"><%= data[i].location%></a>
+                            </td>                   
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <% } %>
+        </h2>
+
+        <form action="/campuses/add" method="POST">
+            <input type="text" name="location" value="<%= data.location %>" placeholder="add a campus">
+            <button type="submit" onclick="return alert('Are you sure?')" href="/campuses/add/<%= data.location %>">Add Campus</button>
+        </form>
+
+    </body>
+
+</html>

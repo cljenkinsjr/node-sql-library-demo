@@ -6,7 +6,8 @@
 - Develop an understanding of creating and using a relational database management system (RDBMS), specifically MySQL, to create the proper entity relationships
 
 ## Setup
-
+- Install MySQL
+- Install Node.js
 - Execute the following commands on a command line to setup the project:
   - npm install -g express-generator
   - express --view=ejs node-sql-library-demo
@@ -23,8 +24,11 @@
 - Create a .gitignore file by going to https://www.toptal.com/developers/gitignore
   - Select/Type Node
   - Select/Type Visual Studio Code
-  - Create and copy paste into .gitignore file in your project 
+  - Create and copy paste into .gitignore file in your project
 
+## Execute/Run Application
+- npm start
+- project URL will be localhost:3000
 
 ## The Project Explanation
 

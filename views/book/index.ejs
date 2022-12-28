@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>WeCanCodeIT Library Book</title>
+</head>
+
+<body>
+    
+<section class="book-details">
+    <% if (messages.success) { %>
+        <div class="alert alert-success" role="alert"><%- messages.success %></div>
+    <% } %>
+
+    <% if (messages.error) { %>
+        <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+    <% } %>
+
+    <% if(data.length) { %>
+        <h1 class="book-details__title"><%= data[0].title%></h1>
+            <% for(let i = 0; i < data.length; i++) { %>
+                <h3 class="book-details__author"><%= data[i].first_name%> <%= data[i].last_name%></h3>
+            <% } %>
+            <p><%= data[0].description%></p>
+           
+    <% } %>
+</section>
+
+<a class="nav__home" href="/campuses/campus/ <%= data[0].campus_id %>">back to campus</a>
+</body>
+</html>
